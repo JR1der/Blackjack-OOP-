@@ -6,7 +6,7 @@ import blackjack_req.Table;
  *
  * House class
  *
- * House class which has list of tables
+ * House class which has list of tables,
  * If you want to change minimal or maximal bet on each table or add tables change data here
  */
 

@@ -8,19 +8,19 @@ import blackjack_req.Table;
 
 import java.util.Scanner; // scanner to input
 
-
+/**
+ * Main func
+ *
+ * Has choice menu in it with switch,
+ * If you pick 1 starts the game from choosing the table,
+ * If you pick 2 shows current balance,
+ * If you pick 3 exits the program and finishes the game,
+ *
+ * @author Ivan Popovych
+ */
 public class Main {
 
-    /**
-     * Main func
-     *
-     * Has choice menu in it with switch
-     * If you pick 1 starts the game from choosing the table
-     * If you pick 2 shows current balance
-     * If you pick 3 exits the program and finishes the game
-     *
-     * @author Ivan Popovych
-     */
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int userChoice;
@@ -73,7 +73,7 @@ public class Main {
     /**
      * Game function
      *
-     * @param balance of the player on the start of the game
+     * @param balance of the player on the start of the game;
      *
      * @return balance of the player after playing this session
      */
@@ -100,7 +100,7 @@ public class Main {
         /*
         Doing a choice code
 
-        If the balance is lower than the table minimal bet throws an error
+        If the balance is lower than the table minimal bet throws an error,
 
         If picks the right one enters in bet menu
          */
@@ -122,7 +122,7 @@ public class Main {
         }
 
         /*
-        The loop is working until you have money, and until you have enough money to place a bet on the chosen table
+        The loop is working until you have money, and until you have enough money to place a bet on the chosen table,
 
         If instead of the bet you write -1 exits to the main menu
          */

@@ -1,20 +1,21 @@
 package blackjack_req;
 
-/**
- *
- * Class deck
- *
- * This class creates an array of cards
- * Also it adds 52 cards to a deck
- * When calling shuffleDeck function shuffles the deck using random
- * Gives cards to a player or a dealer
- */
+
 
 
 // import of random to shuffle deck
 import java.util.Random;
 import java.util.ArrayList;
 
+/**
+ *
+ * Class deck
+ *
+ * This class creates an array of cards,
+ * Also it adds 52 cards to a deck,
+ * When calling shuffleDeck function shuffles the deck using random,
+ * Gives cards to a player or a dealer
+ */
 public class Deck {
     private ArrayList<Card> cards = new ArrayList<Card>(); // creates new array of cards
 

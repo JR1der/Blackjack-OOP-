@@ -1,14 +1,15 @@
 package blackjack_req;
 
+
+
+import java.util.ArrayList;
+
 /**
  *
  * Class hand
  *
  * Class hand created to store cards which player or dealer has in hands
  */
-
-import java.util.ArrayList;
-
 public class Hand {
     public ArrayList<Card> hand; // creates an array to store the cards in hand
 
