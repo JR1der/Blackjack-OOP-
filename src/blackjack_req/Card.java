@@ -1,15 +1,22 @@
 package blackjack_req;
 
+/**
+ *
+ * Card class
+ *
+ * Card glass gets value from enum value and suit of the card from enum suit
+ */
+
 public class Card {
     private Value value;
     private Suit suit;
 
-    public Card(Suit suit, Value value) {
+    public Card(Suit suit, Value value) { // constructor with parameters (card value and card suit)
         this.suit = suit;
         this.value = value;
     }
 
-    public String get_suit() {
+    public String get_suit() { // returns the symbol of each suit
         switch (this.suit) {
             case DIAMONDS:
                 return "♦";
@@ -25,7 +32,7 @@ public class Card {
     }
 
 
-    public String get_value() {
+    public String get_value() { // returns the value of each card
         switch (this.value) {
             case TWO:
                 return "2";

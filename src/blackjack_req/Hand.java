@@ -1,27 +1,34 @@
 package blackjack_req;
 
+/**
+ *
+ * Class hand
+ *
+ * Class hand created to store cards which player or dealer has in hands
+ */
+
 import java.util.ArrayList;
 
 public class Hand {
-    public ArrayList<Card> hand;
+    public ArrayList<Card> hand; // creates an array to store the cards in hand
 
     public Hand() {
         this.hand = new ArrayList<Card>();
     }
 
     public void addCardHand(Card card) {
-        this.hand.add(card);
+        this.hand.add(card); // adds card to the array
     }
 
     public void clearHand() {
-        this.hand.clear();
+        this.hand.clear(); // clears card from the array
     }
 
     public void coutCard(int a) {
-        if (a == 1) {
+        if (a == 1) { // if calling this func with a parameter 1 outputs only 1st card of the array (output for the dealer)
             System.out.print(this.hand.get(0).get_value());
             System.out.println(this.hand.get(0).get_suit());
-        } else {
+        } else { // outputs all the cards (output for player)
             for (Card card : this.hand) {
                 System.out.print(card.get_value());
                 System.out.println(card.get_suit());
@@ -30,9 +37,9 @@ public class Hand {
     }
 
     public int getValueHand() {
-        int sum = 0, ace = 0;
+        int sum = 0, ace = 0; // init variables of number of ace cards and overall sum
         for (Card card : this.hand) {
-            switch (card.get_value()) {
+            switch (card.get_value()) { // if card has some value, adds it's value to the sum
                 case "2":
                     sum += 2;
                     break;
@@ -69,19 +76,19 @@ public class Hand {
                 case "J":
                     sum += 10;
                     break;
-                case "A":
+                case "A": // if the card has is the ace, adds 1 to the number of aces
                     ace++;
                     break;
             }
         }
-        if (sum == 21) {
+        if (sum == 21) { // if sum == 21 return sum
             return sum;
         }
-        for (int i = 0; i < ace; i++) {
-            if (sum > 10) {
+        for (int i = 0; i < ace; i++) { // loop to count values of aces
+            if (sum > 10) { // if the value of cards is bigger then 10 adds only one if you have an ace in your hand
                 sum++;
-            } else sum += 11;
+            } else sum += 11; // otherwise adds 11
         }
-        return sum;
+        return sum; // return sum
     }
 }

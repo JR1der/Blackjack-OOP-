@@ -1,6 +1,12 @@
 package blackjack_req;
 
-//enum of values of cards
+/**
+ *
+ * Enum for values of cards
+ *
+ * Has values of suits of the cards
+ * Needed in the card class
+ */
 
 public enum Value {
     TWO,
